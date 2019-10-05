@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".MainActivity">
 
 
@@ -29,8 +28,20 @@
         android:id="@+id/bio_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
+            <ImageView
+                android:id="@+id/check_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:contentDescription="@string/check_image"
+                app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            <TextView
             android:id="@+id/bio_text"
             style="@style/NameStyle"
             android:layout_width="match_parent"
@@ -39,9 +50,17 @@
             android:paddingStart="@dimen/layout_padding"
             android:paddingEnd="@dimen/layout_padding"
             android:text="@string/bio" />
+
+            <ImageView
+                android:id="@+id/lightStar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/light_star"
+                app:srcCompat="@android:drawable/btn_star_big_off" />
+
+        </LinearLayout>
+
     </ScrollView>
-
-
 
 
 </LinearLayout>
